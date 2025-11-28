@@ -1,0 +1,105 @@
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  background: #070000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+/* --- HERO --- */
+.hero {
+  background: rgb(177, 36, 130);
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.bouton {
+  display: inline-block;
+  background: #2a0bb3;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 15px;
+
+  transition: transform 0.25s ease, 0.25s ease;
+}
+
+.bouton:hover {
+  background: #6f86ff;
+  transform: scale(1.08);
+}
+
+/* --- CARTES CLIQUABLES --- */
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.carte {
+  background: rgb(58, 10, 189);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+
+  /* pour bouton cliquable */
+  display: block;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* animation hover */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carte:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.6);
+}
+
+/* --- ACTEURS --- */
+.Acteurs {
+  background: rgb(243, 149, 7);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Acteur {
+  padding: 15px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: rgb(19, 22, 214);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.carte:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}

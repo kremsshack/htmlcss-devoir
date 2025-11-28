@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style global */
+body {
+  margin: 0;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* ================== HEADER ================== */
+
+header {
+  text-align: center;
+  padding-block: 2.5rem;
+  background: radial-gradient(circle at top, #111827 0, #020617 60%);
+  background-size: 200% 200%;
+  color: #f9fafb;
+  animation: headerGlow 12s ease-in-out infinite;
+}
+
+@keyframes headerGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: letter-spacing 0.25s ease, color 0.25s ease;
+}
+
+header h1:hover {
+  letter-spacing: 0.18em;
+  color: #38bdf8;
+}
+
+header p {
+  color: #9ca3af;
+  max-width: 640px;
+  margin-inline: auto;
+  font-size: 0.95rem;
+}
+
+/* ================== HERO ================== */
+
+#hero {
+  padding-block: 3rem;
+  text-align: center;
+  background: linear-gradient(135deg, #020617, #111827 40%, #020617 100%);
+  border-top: 1px solid #1f2937;
+  border-bottom: 1px solid #1f2937;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+#hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+#hero p {
+  color: #e5e7eb;
+  max-width: 700px;
+  margin-inline: auto;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ================== SECTION GRILLE ================== */
+
+#grille {
+  padding-block: 2.5rem;
+  padding-inline: 1.5rem;
+  background: #020617;
+  text-align: center;
+}
+
+#grille h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.3rem;
+}
+
+#grille p {
+  padding-block: 0.5rem;
+  color: #9ca3af;
+  max-width: 720px;
+  margin-inline: auto;
+  font-size: 0.95rem;
+}
+
+/* Grille de cartes */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding-block: 1.8rem;
+}
+
+/* les liens occupent toute la cellule */
+.grid a {
+  display: block;
+  text-decoration: none;
+}
+
+/* boutons-carte */
+
+.carte {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-block: 1.8rem;
+  padding-inline: 1.4rem;
+
+  background: #111827;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #f9fafb;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 0 1px #1f2937;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+}
+
+.carte:hover,
+.carte:focus-visible {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: #ecfeff;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.7), 0 10px 25px rgba(0, 0, 0, 0.9);
+  outline: none;
+}
+
+/* Effet au clic : bouton légèrement enfoncé */
+
+.carte:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.5), 0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* ================== SECTION COMMENT ================== */
+
+#comment {
+  padding-block: 2.8rem;
+  padding-inline: 1.5rem;
+  background: #020617;
+  border-top: 1px solid #111827;
+}
+
+#comment h2 {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+/* LISTE "COMMENT PROCÉDER ?" */
+
+.etapes {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-block: 1.6rem;
+}
+
+.etapes li {
+  background: #020617;
+  padding: 20px;
+  border-radius: 1rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85), 0 0 0 1px #1f2937;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.etapes li:hover {
+  background: #0b1120;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9), 0 0 0 1px #38bdf8;
+}
+
+.etapes .num {
+  padding-inline: 18px;
+  padding-block: 6px;
+  background: #0f766e;
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.etapes li:hover .num {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+/* ================== SECTION EXEMPLE DARK PATTERN ================== */
+
+#exemple {
+  padding-block: 2.8rem;
+  padding-inline: 1.5rem;
+  background: #020617;
+  border-top: 1px solid #111827;
+}
+
+#exemple h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+#exemple p {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* faux bandeau cookies */
+
+.fake-banner {
+  max-width: 720px;
+  margin-inline: auto;
+  background: #020617;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9), 0 0 0 1px #1f2937;
+}
+
+.fake-text {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.fake-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* bouton trompeur très mis en avant */
+
+@keyframes pulseAccept {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 18px rgba(248, 194, 93, 0.9), 0 6px 14px rgba(0, 0, 0, 0.7);
+  }
+
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 26px rgba(248, 194, 93, 1), 0 10px 18px rgba(0, 0, 0, 0.9);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 18px rgba(248, 194, 93, 0.9), 0 6px 14px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.btn-accepter {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #111827;
+  font-weight: 700;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  animation: pulseAccept 1.6s ease-in-out infinite;
+}
+
+/* bouton "refuser" dark pattern */
+
+.btn-refuser {
+  background: #020617;
+  color: #6b7280;
+  border: 1px solid #374151;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ================== SECTION INFO ================== */
+
+#info {
+  padding-block: 2.8rem;
+  padding-inline: 1.5rem;
+  background: radial-gradient(
+    circle at bottom,
+    #020617 0,
+    #020617 40%,
+    #000000 100%
+  );
+  text-align: center;
+  color: #e5e7eb;
+  border-top: 1px solid #111827;
+}
+
+#info h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+#info p {
+  max-width: 720px;
+  margin-inline: auto;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+#info .note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #a5b4fc;
+  margin-top: 0.8rem;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+#info .note:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+}
+
+/* ================== FOOTER ================== */
+
+footer {
+  text-align: center;
+  padding-block: 1rem;
+  background: #000000;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 900px) {
+  .etapes {
+    grid-template-columns: 1fr;
+  }
+
+  .fake-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fake-actions button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero,
+  #grille,
+  #comment,
+  #exemple,
+  #info {
+    padding-inline: 1rem;
+  }
+}

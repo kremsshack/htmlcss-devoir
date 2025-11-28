@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styleeric.css" rel="stylesheet" />
+    <title>Éthique numérique & Dark Patterns</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>L'éthique d'un site web</h1>
+      <p>
+        Un bon design respecte l'utilisateur : il est clair, honnête et ne
+        cherche pas à manipuler.
+      </p>
+    </header>
+
+    <nav id="hero">
+      <h2>Dark patterns</h2>
+      <p>
+        Les dark patterns sont des pièges de conception qui poussent
+        l'utilisateur à cliquer ou accepter quelque chose qu'il n'aurait pas
+        choisi en toute conscience.
+      </p>
+    </nav>
+
+    <section id="grille">
+      <h2>Des boutons éthiques</h2>
+      <p>
+        Chaque bouton ici renvoie vers une ressource qui aide à comprendre,
+        repérer et éviter les dark patterns dans les interfaces.
+      </p>
+
+      <div class="grid">
+        <a href="https://fr.wikipedia.org/wiki/Dark_pattern" target="_blank">
+          <button class="carte">Comprendre les dark patterns</button>
+        </a>
+
+        <a
+          href="https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/pieges-sur-les-sites-de-commerce-en-ligne-attention-aux-dark-patterns"
+          target="_blank"
+        >
+          <button class="carte">Pièges sur les sites marchands</button>
+        </a>
+
+        <a
+          href="https://www.cnil.fr/fr/securite-definir-un-cadre-pour-les-utilisateurs"
+          target="_blank"
+        >
+          <button class="carte">Protéger sa vie privée</button>
+        </a>
+
+        <a
+          href="https://mycommunit.io/blog/article/developpeur-web-et-ethique-les-enjeux-du-code-responsable/id-article=213"
+          target="_blank"
+        >
+          <button class="carte">Développer de façon responsable</button>
+        </a>
+      </div>
+    </section>
+
+    <section id="comment">
+      <h2>Comment procéder ?</h2>
+      <ol class="etapes">
+        <li>
+          <div class="num">Clarté</div>
+          Les écrans doivent expliquer clairement ce qui se passe : formulaires
+          simples, boutons lisibles, actions compréhensibles dès le premier coup
+          d'œil.
+        </li>
+
+        <li>
+          <div class="num">Consentement</div>
+          Le consentement doit être libre : pas de cases précochées, pas de
+          “oui” énorme et “non” caché, et toujours la possibilité de revenir en
+          arrière.
+        </li>
+
+        <li>
+          <div class="num">Respect</div>
+          L’interface ne doit pas pousser l'utilisateur à consommer plus, à
+          s'abonner par erreur ou à donner des données dont il n’a pas
+          réellement besoin.
+        </li>
+      </ol>
+    </section>
+
+    <section id="exemple">
+      <h2>Exemple de dark pattern</h2>
+      <p>
+        Ci-dessous, un faux exemple de bannière qui n’est pas éthique : le
+        bouton “Tout accepter” est mis en avant, tandis que l’option pour
+        refuser est beaucoup moins visible. Ce type de choix déséquilibré est un
+        dark pattern.
+      </p>
+
+      <div class="fake-banner">
+        <p class="fake-text">
+          Nous utilisons vos données pour personnaliser les pubs, partager avec
+          127 partenaires et suivre chacun de vos clics.
+        </p>
+        <div class="fake-actions">
+          <button class="btn-accepter">Tout accepter (recommandé)</button>
+          <button class="btn-refuser">Paramètres…</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="info">
+      <h3>Pourquoi l'éthique du design est essentielle ?</h3>
+      <p>
+        Un site éthique construit une relation de confiance : l'utilisateur sait
+        à quoi servent les boutons, comment ses données sont utilisées et peut
+        dire “non” sans être pénalisé.
+      </p>
+      <p class="note">
+        À court terme, les dark patterns peuvent rapporter plus de clics. À long
+        terme, ils détruisent la confiance, l’image du site et la crédibilité de
+        ceux qui le conçoivent.
+      </p>
+    </section>
+
+    <footer>
+      <p>Projet HTML & CSS — Éthique du web et dark patterns</p>
+    </footer>
+  </body>
+</html>
